@@ -1,0 +1,29 @@
+.div{
+    color: cornsilk;
+    margin-left: 3cm;
+    margin-right: 3cm;
+    font-size: 25px;
+    font: size large;
+    padding: 20px;
+    
+    width: 14px;
+    height:19px;
+   
+
+}
+
+h1{
+    color:darkgreen;
+}
+h2{
+    color: rgb(65, 0, 139);
+
+}
+fieldset{
+    background-color: rgb(65, 0, 139);
+}
+table{
+    border: silver;
+    width: 0%;
+
+}
