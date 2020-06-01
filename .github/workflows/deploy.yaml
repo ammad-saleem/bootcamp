@@ -1,0 +1,24 @@
+name: bootcamp2020
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Installing Node  
+    with: node-version:13
+    -name: installing surge
+    run: npm install --global surge
+      -name: Deploying using surge
+      run: surge./http://ammad2.surge.sh --token $ {{ secret.TOKEN_SECRET }}
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+}}
